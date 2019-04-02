@@ -1,0 +1,87 @@
+@import "~theme/index.scss";
+
+.link.main {
+  .icon {
+    vertical-align: middle;
+  }
+}
+
+.section-home {
+  .section-news {
+    .newsletter-row {
+      margin-top: rem(50);
+    }
+  }
+  .home-header-link {
+    text-align: right;
+  }
+  .section-what-we-do {
+    .title {
+      margin: rem(0);
+    }
+    .all-media {
+      .masonry {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: rem(-28); /* gutter size offset */
+        width: auto;
+      }
+      .masonry-column {
+        padding-left: rem(28);
+        background-clip: padding-box;
+      }
+      .article-preview:first-of-type {
+        margin-top: rem(25);
+      }
+    }
+    .all-media-link {
+      margin-top: rem(100);
+    }
+  }
+}
+
+@media only screen and (max-width: rem(1199)) {
+  .section-home {
+    .section-news {
+      margin-top: rem(50);
+    }
+    .section-what-we-do {
+      margin-top: rem(75);
+      .all-media {
+        .masonry {
+          margin-left: rem(-58); /* gutter size offset */
+        }
+        .masonry-column {
+          padding-left: rem(58);
+        }
+        .article-preview {
+          margin-bottom: rem(0);
+        }
+        .article-preview:first-of-type {
+          margin-bottom: rem(50);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: rem(767)) {
+  .section-home {
+    .section-what-we-do {
+      margin-top: rem(50);
+      .article-preview {
+        margin-top: rem(50);
+      }
+      .all-media-link {
+        margin-top: rem(60);
+      }
+      .masonry {
+        margin-left: rem(0); /* gutter size offset */
+      }
+      .masonry-column {
+        padding-left: rem(0);
+      }
+    }
+  }
+}

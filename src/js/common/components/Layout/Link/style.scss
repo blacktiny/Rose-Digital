@@ -1,0 +1,140 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.link {
+  cursor: pointer;
+  display: contents;
+  &.main {
+    display: contents;
+    position: relative;
+    color: $primary-color;
+    &.primary {
+      color: $primary-color;
+    }
+    &.secondary {
+      color: $secondary-color;
+    }
+  }
+  &.new {
+    display: inline-block;
+    &.primary {
+      color: $primary-color;
+    }
+    &.secondary {
+      color: $primary-color;
+    }
+    .new-window {
+      font-family: "iconFont";
+      font-size: rem(14.8);
+      margin: rem(0) rem(8);
+    }
+    h1.typography::after {
+      bottom: rem(25);
+    }
+  }
+  &.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: rem(40);
+    width: rem(150);
+    text-align: center;
+    border: rem(2) solid $white-color;
+    &.primary {
+      border-color: $primary-color;
+    }
+    &.secondary {
+      border-color: $primary-color;
+    }
+  }
+  &.inline-flex {
+    display: inline-flex;
+  }
+  &.color-white {
+    color: $white-color;
+    .typography::after {
+      background-color: $white-color !important;
+    }
+  }
+  &.color-news {
+    color: $section-news;
+    .typography::after {
+      background-color: $section-news !important;
+    }
+  }
+  &.color-what-we-do {
+    color: $section-what-we-do;
+    .typography::after {
+      background-color: $section-what-we-do !important;
+    }
+  }
+  &.color-about {
+    color: $section-about;
+    .typography::after {
+      background-color: $section-about !important;
+    }
+  }
+  &.color-case-studies {
+    color: $section-case-studies;
+    .typography::after {
+      background-color: $section-case-studies !important;
+    }
+  }
+  &.color-accent-lightgray {
+    color: $accent-lightgray;
+    .typography::after {
+      background-color: $accent-lightgray !important;
+    }
+  }
+  &.color-accent-orange {
+    color: $accent-orange;
+    .typography::after {
+      background-color: $accent-orange !important;
+    }
+  }
+  &.color-accent-green {
+    color: $accent-green;
+    .typography::after {
+      background-color: $accent-green !important;
+    }
+  }
+  &.color-accent-navy {
+    color: $accent-navy;
+    .typography::after {
+      background-color: $accent-navy !important;
+    }
+  }
+}
+
+.section-case-studies {
+  .link {
+    .typography::after {
+      background-color: $section-case-studies;
+    }
+  }
+}
+
+.section-news {
+  .link {
+    .typography::after {
+      background-color: $section-news;
+    }
+  }
+}
+
+.section-what-we-do {
+  .link {
+    .typography::after {
+      background-color: $section-what-we-do;
+    }
+  }
+}
+
+.section-about {
+  .link {
+    .typography::after {
+      background-color: $section-about;
+    }
+  }
+}

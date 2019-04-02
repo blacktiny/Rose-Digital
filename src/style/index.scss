@@ -1,0 +1,97 @@
+@import "~theme/configs/typography.scss";
+@import "~theme/configs/mixins.scss";
+
+html {
+  overflow-x: hidden;
+  font-size: 18px;
+  margin: rem(0);
+  body {
+    position: relative;
+    font-family: "Montserrat" !important;
+    letter-spacing: rem(-0.3);
+    line-height: rem(34);
+    color: $primary-color;
+    margin: rem(0);
+    .anchor {
+      display: block;
+      height: rem(115);
+      margin-top: rem(-115);
+      visibility: hidden;
+    }
+    .hide {
+      display: none;
+    }
+    .outer-col {
+      padding-right: rem(0);
+    }
+    .no-margin {
+      margin: rem(0);
+    }
+    .no-pad {
+      padding: rem(0) !important;
+    }
+    .row .row {
+      margin: rem(0);
+      [class*="col-"]:first-of-type {
+        padding-left: rem(0);
+      }
+    }
+    .video-wrapper {
+      line-height: rem(0);
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+@media only screen and (min-width: rem(992)) {
+  html,
+  body {
+    .row {
+      [class*="col-lg"] {
+        padding: rem(0) rem(15);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: rem(768)) and (max-width: rem(991)) {
+  html,
+  body {
+    .row {
+      [class*="col-md"] {
+        padding: rem(0) rem(12.5);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: rem(767)) {
+  html,
+  body {
+    .left-mobile {
+      text-align: left;
+    }
+    .row {
+      [class*="col-sm"] {
+        padding: rem(0);
+      }
+      [class*="col-xs"] {
+        padding: rem(0);
+      }
+    }
+    .no-pad-mobile {
+      padding: rem(0) !important;
+    }
+  }
+}

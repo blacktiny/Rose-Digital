@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import "~theme/configs/color";
+
+@font-face {
+  font-family: "iconFont";
+  src:  url('~assets/fonts/iconFont.eot?2knk5t');
+  src:  url('~assets/fonts/iconFont.eot?2knk5t#iefix') format('embedded-opentype'),
+    url('~assets/fonts/iconFont.ttf?2knk5t') format('truetype'),
+    url('~assets/fonts/iconFont.woff?2knk5t') format('woff'),
+    url('~assets/fonts/iconFont.svg?2knk5t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "iconFont" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "iconFont" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-new-window:before {
+  content: "\61";
+}
+.icon-close-menu:before {
+  content: "\62";
+}
+.icon-arrow-before-after:before {
+  content: "\63";
+}
+.icon-arrow-down:before {
+  content: "\64";
+}
+.icon-chat:before {
+  content: "\65";
+}
+.icon-social-facebook:before {
+  content: "\66";
+}
+.icon-social-instagram:before {
+  content: "\67";
+}
+.icon-social-linkedin:before {
+  content: "\68";
+}
+.icon-social-twitter:before {
+  content: "\69";
+}
+.icon-social-linkedin-new:before {
+  content: "\6b";
+}
+.icon-social-twitter-new:before {
+  content: "\6a";
+}

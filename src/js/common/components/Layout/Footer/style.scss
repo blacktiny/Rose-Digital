@@ -1,0 +1,59 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.section-footer {
+  margin-top: rem(100);
+  .footer-top {
+    margin-bottom: rem(50);
+  }
+  .footer-bottom {
+    background-color: $footer-darkgray;
+    padding: rem(20) rem(0);
+    align-items: center;
+    .left-side-footer {
+      display: flex;
+      align-items: center;
+      .rose-logo {
+        height: rem(60);
+        width: rem(60);
+        margin-right: rem(10);
+      }
+    }
+    .chat-now {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: rem(8);
+    }
+  }
+}
+
+@media (min-width: rem(768)) and (max-width: rem(1024)) {
+  .section-footer {
+    .footer-top {
+      margin-bottom: rem(60);
+    }
+  }
+}
+
+@media (max-width: rem(767)) {
+  .section-footer {
+    .footer-top {
+      margin-bottom: rem(20);
+      .contact-info {
+        margin-bottom: rem(30);
+      }
+      .address-info {
+        margin-bottom: rem(30);
+      }
+    }
+    .footer-bottom {
+      .copyright-text {
+        display: none;
+      }
+    }
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+}

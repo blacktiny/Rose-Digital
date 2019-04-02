@@ -1,0 +1,114 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.section-about {
+  .section-main-content {
+    .space-between-paragraph-main-content {
+      margin-top: rem(25);
+    }
+  }
+  .section-contact {
+    margin-top: rem(100);
+    .address {
+      font-style: normal;
+      .address-break {
+        margin: rem(30) rem(0) rem(0);
+      }
+    }
+    .social-media {
+      line-height: rem(24.94) !important;
+      margin: rem(0);
+      .social-icon-group {
+        margin: rem(30) rem(0);
+      }
+    }
+  }
+  .section-leadership {
+    margin-top: rem(100);
+    .section-bio:nth-child(2) {
+      margin-top: rem(40);
+    }
+    .section-bio {
+      margin-top: rem(65);
+      .leadership-pic {
+        height: rem(173);
+        width: rem(173);
+        margin: rem(10) rem(0);
+        background-size: cover;
+      }
+      .leadership-title {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .section-join-our-team {
+    margin: rem(100) rem(0) rem(0);
+  }
+}
+
+//tablet
+@media (min-width: rem(701)) and (max-width: rem(1024)) {
+  .section-about {
+    .section-main-content {
+      .about-header {
+        padding: rem(0);
+      }
+      .space-between-paragraph-main-content {
+        margin-top: rem(41);
+      }
+    }
+    .section-contact {
+      .address-break {
+        margin-top: rem(30);
+      }
+    }
+    .section-leadership {
+      .section-bio {
+        .leadership-pic {
+          height: rem(173);
+          width: rem(173);
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media only screen and (max-width: rem(700)) {
+  .section-about {
+    .small-header {
+      margin-bottom: rem(30);
+    }
+    .section-main-content {
+      .space-between-paragraph-main-content {
+        margin-top: rem(30);
+      }
+    }
+    .section-contact {
+      margin-top: rem(75);
+    }
+    .section-leadership {
+      margin-top: rem(75);
+      .section-bio:nth-child(2) {
+        margin-top: rem(30);
+      }
+      .section-bio {
+        margin-top: rem(100);
+        .leadership-pic {
+          height: rem(173);
+          width: rem(173);
+          margin: rem(0) rem(0) rem(30);
+        }
+        .leadership-title {
+          margin-bottom: rem(30);
+        }
+      }
+    }
+    .section-join-our-team {
+      .new-window {
+        display: none;
+      }
+    }
+  }
+}

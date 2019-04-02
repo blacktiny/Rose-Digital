@@ -1,0 +1,25 @@
+{
+  "name": "rd-web",
+  "version": 1,
+  "type": "static",
+  "static": {
+    "public": "docroot",
+    "rewrites": [
+      {
+        "source": "/src/assets/fonts"
+      },
+      {
+        "source": "**",
+        "destination": "index.html"
+      }
+    ]
+  },
+  "alias": [
+    "rd-dev",
+    "rd-qa",
+    "rd-stage",
+    "rd-prod"
+  ],
+  "public": false,
+  "forwardNpm": true
+}

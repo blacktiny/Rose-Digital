@@ -1,0 +1,42 @@
+@import "~theme/index.scss";
+
+.top-news-preview {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(30);
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: rem(0) rem(0) rem(5) rem(1) $section-news;
+  }
+
+  &-image {
+    width: 35%;
+    margin-left: rem(8);
+    img {
+      align-items: flex-start;
+      width: 100%;
+      height: rem(150);
+      background-position: center top;
+
+      @media only screen and (max-width: rem(1400)) {
+        height: auto;
+      }
+      @media only screen and (max-width: rem(788)) {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: rem(1400)) {
+      width: 100%;
+    }
+  }
+  &-header {
+    width: 58%;
+    margin-left: rem(25);
+    @media only screen and (max-width: rem(1400)) {
+      width: 100%;
+      margin-left: 0;
+      margin-left: rem(8);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "~theme/index.scss";
+
+.toptier {
+  display: flex;
+  align-items: center;
+  .title-container {
+    max-width: rem(237);
+    .title {
+      margin-bottom: rem(40);
+      &::after {
+        bottom: rem(-40);
+      }
+    }
+  }
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+    height: rem(90);
+    .items-container {
+      position: absolute;
+      top: rem(0);
+      left: rem(0);
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      .items {
+        flex: 1;
+        .item {
+          vertical-align: middle;
+          object-fit: contain;
+          width: rem(70);
+        }
+      }
+      transition: all 1s;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: rem(1199)) {
+  .toptier {
+    .wrapper {
+      height: rem(75);
+      .items-container {
+        .items {
+          .item {
+            width: rem(60);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: rem(767)) {
+  .toptier {
+    .title-container {
+      .title {
+        margin-bottom: rem(88);
+        &::after {
+          bottom: rem(-40);
+        }
+      }
+    }
+    .wrapper {
+      height: rem(40);
+      .items-container {
+        .items {
+          padding-bottom: rem(0);
+          .item {
+            width: rem(50);
+          }
+        }
+      }
+    }
+  }
+}

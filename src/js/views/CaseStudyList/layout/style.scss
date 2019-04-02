@@ -1,0 +1,20 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.section-case-studies-list {
+  .row {
+    .post-preview:nth-last-child(1) {
+      margin-bottom: rem(0);
+    }
+    .post-preview {
+      .fullWidthFlex {
+        .post-preview-title {
+          margin-top: rem(0);
+        }
+      }
+      &.bottom-row {
+        margin-bottom: rem(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.tag {
+  height: rem(42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: rem(20);
+  border: none;
+  outline: none;
+  padding: 0 rem(35);
+  margin-right: rem(30);
+  text-decoration: none;
+  &-name {
+    color: $white-color;
+    font-family: "Montserrat" !important;
+    font-size: rem(13.3);
+    letter-spacing: rem(0.3);
+    text-transform: lowercase;
+  }
+  &-color-white {
+    color: $white-color;
+  }
+  &-color-news {
+    color: $section-news;
+  }
+  &-back-color-white {
+    background-color: $white-color;
+  }
+  &-back-color-news {
+    background-color: $section-news;
+  }
+  &-width-fixed {
+    width: rem(190);
+    padding: rem(0);
+  }
+}
+
+.tag-second-style {
+  background-color: transparent;
+  margin-top: rem(3);
+  margin-bottom: rem(3);
+  padding: rem(0);
+}

@@ -1,0 +1,11 @@
+@import "~theme/index.scss";
+
+.section {
+  margin-top: rem(100);
+}
+
+@media (max-width: rem(767)) {
+  .section {
+    margin-top: rem(60);
+  }
+}

@@ -1,0 +1,49 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.desc-box {
+  margin-bottom: rem(50);
+  &.case-studies {
+    background-color: $section-case-studies;
+  }
+  &.news {
+    background-color: $section-news;
+  }
+  &.what-we-do {
+    background-color: $section-what-we-do;
+  }
+  &.about {
+    background-color: $section-about;
+  }
+  .title {
+    color: $white-color !important;
+  }
+  .link-box {
+    margin-top: rem(40);
+  }
+}
+
+//only desktop
+@media (min-width: rem(1200)) {
+  .desc-box {
+    padding: rem(56) rem(28) rem(48);
+    height: 75%;
+    a {
+      position: relative;
+    }
+  }
+}
+
+//tablet
+@media only screen and (max-width: rem(1199)) {
+  .desc-box {
+    padding: rem(50) rem(28) rem(48);
+  }
+}
+
+//mobile
+@media only screen and (max-width: rem(767)) {
+  .desc-box {
+    padding: rem(50) rem(21) rem(35);
+  }
+}

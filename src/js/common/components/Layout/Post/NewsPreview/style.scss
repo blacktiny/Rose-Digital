@@ -1,0 +1,34 @@
+@import "~theme/index.scss";
+
+.news-preview {
+  text-decoration: none;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .newspreview-title {
+    margin-top: rem(20);
+  }
+  .bottom-blank {
+    margin-bottom: rem(20);
+  }
+  &:hover {
+    box-shadow: rem(0) rem(0) rem(5) rem(1) $section-news;
+  }
+}
+
+@media only screen and (min-width: rem(768)) {
+  .news-preview {
+    .newspreview-title {
+      margin-top: rem(20);
+    }
+  }
+}
+
+@media only screen and (max-width: rem(767)) {
+  .news-preview {
+    .newspreview-title {
+      margin-top: rem(20);
+    }
+  }
+}

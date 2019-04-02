@@ -1,0 +1,347 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+html,
+body {
+  .section-case-studies {
+    .typography {
+      &.bold-inline {
+        display: inline-flex;
+        font-weight: 700;
+      }
+      &.lg-body {
+        font-size: rem(72);
+        line-height: rem(73);
+        letter-spacing: rem(-0.75);
+      }
+      &.xl-body {
+        font-size: rem(86);
+        line-height: rem(80);
+        letter-spacing: rem(-0.9);
+      }
+      &.xxl-body {
+        font-size: rem(158);
+        line-height: rem(159);
+        letter-spacing: rem(-1.65);
+      }
+      &.amex-body {
+        font-size: rem(158);
+        line-height: rem(159);
+        letter-spacing: rem(-1.65);
+      }
+      &.fuse-224 {
+        font-size: rem(224);
+        line-height: rem(100);
+        letter-spacing: rem(-2.33);
+      }
+      &.fuse-body {
+        font-size: rem(158);
+        line-height: rem(159);
+        letter-spacing: rem(-1.65);
+      }
+      &.mil-font {
+        font-size: rem(74);
+        line-height: rem(75);
+        letter-spacing: rem(-0.75);
+      }
+    }
+    .section-client-work-type-and-description {
+      .agency-partner {
+        margin: rem(30) rem(0) rem(0);
+      }
+      .agency-logo {
+        margin-top: rem(20);
+        height: rem(45);
+        width: rem(212.6);
+      }
+      .skill-description-container {
+        padding-right: rem(80);
+        .skill-description {
+          margin-bottom: rem(20);
+          line-height: rem(22);
+        }
+        .skill-description:last-child {
+          margin-bottom: rem(0);
+        }
+      }
+    }
+    .section-media {
+      .section-media-blocks {
+        .row {
+          .before-col {
+            padding: rem(10) rem(25);
+          }
+          .after-col {
+            padding: rem(0) rem(28) rem(10) rem(0);
+          }
+          .arrow-before-after-col {
+            margin-top: rem(100); //right and left margin are decided by the Col
+            margin-bottom: rem(-90);
+            text-align: center;
+          }
+        }
+        .media-inset {
+          width: 100%;
+        }
+      }
+    }
+    .section-key-performance {
+      img {
+        margin-top: rem(30);
+        max-width: 90%;
+      }
+      .row .row {
+        [class*="col-"]:nth-child(n + 3) {
+          margin-top: rem(80);
+        }
+        [class*="col-"]:nth-child(odd) {
+          padding-left: rem(0);
+        }
+        [class*="col-"]:nth-child(even) {
+          padding-right: rem(0);
+        }
+      }
+    }
+    .line-seperator {
+      background-color: $section-case-studies;
+      border-color: $section-case-studies;
+      display: block;
+      box-sizing: border-box;
+      height: rem(2);
+      width: 100%;
+      border: rem(4) solid;
+      color: $section-case-studies;
+      margin: rem(100) rem(0);
+    }
+  }
+}
+
+//small desktop
+@media (max-width: rem(1270)) {
+  html,
+  body {
+    .section-case-studies {
+      .typography {
+        &.fuse-body {
+          font-size: rem(130);
+          line-height: rem(131);
+          letter-spacing: rem(-1.65);
+        }
+        &.fuse-224 {
+          font-size: rem(185);
+          line-height: rem(100);
+          letter-spacing: rem(-2.15);
+        }
+        &.xl-body {
+          font-size: rem(78);
+          line-height: rem(80);
+          letter-spacing: rem(-1.2);
+        }
+        &.xxl-body {
+          font-size: rem(143);
+          line-height: rem(145);
+          letter-spacing: rem(-1.65);
+        }
+        &.amex-body {
+          font-size: rem(135);
+          line-height: rem(138);
+          letter-spacing: rem(-1.65);
+        }
+      }
+    }
+  }
+}
+
+//tablet
+@media (max-width: rem(1115)) {
+  html,
+  body {
+    .section-case-studies {
+      .section-client-work-type-and-description {
+        .agency-partner {
+          margin: rem(25) rem(0) rem(0);
+        }
+        .agency-logo {
+          height: rem(27.5);
+          width: rem(130);
+        }
+        .skill-description-container {
+          padding-right: rem(12.5);
+        }
+      }
+      .typography {
+        &.lg-body {
+          font-size: rem(35);
+          line-height: rem(37);
+          letter-spacing: rem(-0.85);
+        }
+        &.xl-body {
+          font-size: rem(56);
+          line-height: rem(68);
+          letter-spacing: rem(-1);
+        }
+        &.xxl-body {
+          font-size: rem(110);
+          line-height: rem(112);
+          letter-spacing: rem(-1.24);
+        }
+        &.fuse-body {
+          font-size: rem(106);
+          line-height: rem(118);
+          letter-spacing: rem(-1.25);
+        }
+        &.fuse-224 {
+          font-size: rem(85);
+          line-height: rem(50);
+          letter-spacing: rem(-1);
+        }
+        &.amex-body {
+          font-size: rem(104);
+          line-height: rem(108);
+          letter-spacing: rem(-1.25);
+        }
+      }
+      .section-media {
+        .section-media-blocks {
+          margin-top: rem(50);
+          .row {
+            .arrow-before-after {
+              font-size: rem(285);
+            }
+            .arrow-before-after-col {
+              margin-top: rem(
+                75
+              ); //right and left margin are decided by the Col
+              margin-bottom: rem(-65);
+              text-align: center;
+            }
+          }
+        }
+      }
+      .section-key-performance {
+        .row .row {
+          [class*="col-"]:nth-child(n + 3) {
+            margin-top: rem(30);
+          }
+        }
+      }
+      .line-seperator {
+        margin: rem(50) rem(0);
+      }
+    }
+  }
+}
+
+//mobile
+@media (max-width: rem(767)) {
+  html,
+  body {
+    .section-case-studies {
+      .typography {
+        &.xl-body {
+          font-size: rem(56);
+          line-height: rem(68);
+          letter-spacing: rem(-1);
+        }
+        &.xxl-body {
+          font-size: rem(118);
+          line-height: rem(122);
+          letter-spacing: rem(-2.64);
+        }
+        &.fuse-body {
+          font-size: rem(114);
+          line-height: rem(115);
+          letter-spacing: rem(-2.45);
+        }
+        &.amex-body {
+          font-size: rem(110);
+          line-height: rem(112);
+          letter-spacing: rem(-1.65);
+        }
+      }
+      .section-client-work-type-and-description {
+        .skill-description-container {
+          .skill-description {
+            margin-bottom: rem(20);
+          }
+          .skill-description:last-child {
+            margin-bottom: rem(25);
+          }
+        }
+      }
+      .section-media {
+        .section-media-blocks {
+          .row {
+            .media-block {
+              margin-top: rem(50);
+            }
+            .before-col {
+              padding: rem(0) rem(0) rem(10) rem(5);
+            }
+            .after-col {
+              padding: rem(0) rem(12) rem(10) rem(0);
+            }
+          }
+        }
+      }
+      .section-key-performance {
+        .row {
+          .key-performance {
+            text-align: center;
+          }
+          .row {
+            [class*="col-"]:nth-child(n + 3) {
+              margin-top: rem(0);
+            }
+            [class*="col-"] {
+              margin: rem(0) rem(0) rem(30);
+            }
+            [class*="col-"]:last-child {
+              margin: rem(0);
+            }
+          }
+        }
+      }
+      .section-view-next {
+        .all-media-link {
+          .link.main {
+            .icon {
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//small mobile
+@media (max-width: rem(374)) {
+  html,
+  body {
+    .section-case-studies {
+      .typography {
+        &.xl-body {
+          font-size: rem(50);
+          line-height: rem(52);
+          letter-spacing: rem(-1);
+        }
+        &.xxl-body {
+          font-size: rem(100);
+          line-height: rem(102);
+          letter-spacing: rem(-1);
+        }
+        &.fuse-body {
+          font-size: rem(97);
+          line-height: rem(99);
+          letter-spacing: rem(-1);
+        }
+        &.amex-body {
+          font-size: rem(95);
+          line-height: rem(99);
+          letter-spacing: rem(-1);
+        }
+      }
+    }
+  }
+}

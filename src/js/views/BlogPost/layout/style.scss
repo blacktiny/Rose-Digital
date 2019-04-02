@@ -1,0 +1,113 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.blog-post {
+  .blog-post-header {
+    .header-image {
+      width: 100%;
+      height: rem(440);
+      object-fit: cover;
+    }
+  }
+  .back-button {
+    margin-top: rem(30);
+    width: rem(12);
+    height: rem(17);
+    background-color: $section-news;
+    mask: url("~assets/UIAssets/icon-arrow-down.svg");
+    mask-size: rem(12) rem(17);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+  .blog-title {
+    .title {
+      height: rem(49);
+      color: $primary-color;
+      font-size: rem(48);
+      font-weight: bold;
+      letter-spacing: rem(-0.5);
+      line-height: rem(49);
+    }
+    .date {
+      position: relative;
+      color: $accent-lightgray;
+      font-family: Montserrat;
+      font-size: rem(18);
+      line-height: rem(34);
+      padding-left: rem(122);
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        margin-top: rem(-4);
+        height: rem(8);
+        width: rem(100);
+        box-sizing: border-box;
+        background-color: $section-news;
+      }
+    }
+  }
+  .time-offset {
+    font-size: rem(10);
+    font-weight: 600;
+    color: $section-news;
+    letter-spacing: rem(0.4);
+    line-height: rem(34);
+    text-transform: uppercase;
+  }
+  .topics-holder {
+    margin-top: rem(49);
+  }
+  .topic {
+    display: flex;
+    margin-top: rem(20);
+    height: rem(40);
+    background-color: $section-news;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: $white-color;
+    font-size: rem(12);
+    font-weight: bold;
+    line-height: rem(28);
+  }
+  .testimonial {
+    margin-top: rem(66);
+    margin-bottom: rem(100);
+    .content {
+      &::before {
+        content: "“";
+        color: $section-news;
+      }
+      &::after {
+        content: "”";
+        color: $section-news;
+      }
+      margin-bottom: rem(25);
+    }
+    .provider {
+      color: $section-news;
+      &::before {
+        content: "— ";
+        color: $section-news;
+      }
+    }
+  }
+  .last-paragraph {
+    margin-top: rem(40);
+  }
+  .blog-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: rem(100) 0;
+  }
+  .blog-suggestion {
+    padding-top: rem(48);
+    border-top: rem(8) solid $section-news;
+  }
+}

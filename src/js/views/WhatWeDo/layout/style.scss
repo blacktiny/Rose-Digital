@@ -1,0 +1,144 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.section-what-we-do {
+  .section-services {
+    .section-service-details:first-child {
+      margin-top: rem(0);
+    }
+    .section-service-details {
+      margin-top: rem(25);
+    }
+  }
+  .section-how-we-do-it {
+    margin-top: rem(50);
+  }
+  .section-expertise {
+    margin-top: rem(50);
+    .bullet-container {
+      margin: rem(20) rem(0) rem(25);
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  }
+  .section-media {
+    .media-header {
+      margin: rem(0) rem(0) rem(25);
+    }
+    .all-media {
+      .masonry {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: rem(-28); /* gutter size offset */
+        width: auto;
+      }
+      .masonry-column {
+        padding-left: rem(28);
+        background-clip: padding-box;
+      }
+      .article-preview {
+        margin-bottom: rem(50);
+      }
+    }
+  }
+  .load-more {
+    cursor: pointer;
+    margin-top: rem(50);
+    .icon {
+      vertical-align: top;
+    }
+  }
+}
+
+//tablet
+@media only screen and (max-width: rem(1199)) {
+  .section-what-we-do {
+    .section-services {
+      .section-service-details {
+        margin-top: rem(25);
+      }
+    }
+    .section-how-we-do-it {
+      margin-top: rem(100);
+    }
+    .section-expertise {
+      margin-top: rem(100);
+      .in-page-link {
+        margin-top: rem(20);
+        line-height: rem(22);
+      }
+      .small-header {
+        line-height: rem(22);
+      }
+      .bullet-container {
+        margin: rem(30) rem(0);
+      }
+    }
+    .section-media {
+      .all-media {
+        .masonry {
+          margin-left: rem(-25); /* gutter size offset */
+        }
+        .masonry-column {
+          padding-left: rem(25);
+        }
+      }
+    }
+    .load-more {
+      margin-top: rem(18);
+    }
+  }
+}
+
+// mobile iphone6
+@media only screen and (max-width: rem(767)) {
+  .section-what-we-do {
+    .section-services {
+      .section-service-details:first-child {
+        margin-top: rem(30);
+      }
+      .section-service-details {
+        margin-top: rem(30);
+      }
+    }
+    .section-how-we-do-it {
+      margin-top: rem(75);
+      .small-header {
+        margin-bottom: rem(30);
+      }
+    }
+    .section-expertise {
+      margin-top: rem(75);
+      .in-page-link {
+        margin-top: rem(0);
+        line-height: rem(30);
+      }
+      .small-header {
+        line-height: rem(30);
+      }
+      .top-expertise {
+        margin-top: rem(30);
+      }
+      .bullet-container {
+        margin: rem(30) rem(0);
+        -webkit-column-gap: rem(10); /* Chrome, Safari, Opera */
+        -moz-column-gap: rem(10); /* Firefox */
+        column-gap: rem(10);
+      }
+    }
+    .section-media {
+      margin-top: rem(75);
+      .media-header {
+        margin-bottom: rem(25);
+      }
+    }
+    .load-more {
+      margin-top: rem(0);
+      text-align: left;
+    }
+  }
+}

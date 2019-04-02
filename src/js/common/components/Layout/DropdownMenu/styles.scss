@@ -1,0 +1,356 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20%;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(4);
+    &-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &-name {
+        color: $accent-lightgray;
+        background-color: $accent-lightgray;
+      }
+    }
+    &::after {
+      display: none;
+      box-sizing: border-box;
+      content: " ";
+      bottom: rem(10);
+      height: rem(2);
+      border: rem(2) solid;
+      width: 100%;
+      border-color: $section-news;
+    }
+    &:hover {
+      margin-bottom: rem(0);
+      &::after {
+        display: block;
+      }
+    }
+  }
+  .menu-no-hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .arrow-up {
+    display: flex;
+    margin-left: rem(25);
+    fill: $section-news;
+  }
+  .arrow-down {
+    display: flex;
+    margin-left: rem(25);
+    transform: rotate(180deg);
+  }
+  svg {
+    width: rem(25);
+    height: rem(25);
+    margin: auto;
+  }
+  .menu-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: rem(3) solid $section-news;
+    &-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $section-news;
+      &-name {
+        color: $white-color;
+      }
+      .arrow-up {
+        display: flex;
+        margin-left: rem(25);
+        fill: $white-color;
+        @media only screen and (max-width: rem(450)) {
+          margin-left: rem(15);
+        }
+        @media only screen and (max-width: rem(375)) {
+          margin-left: rem(10);
+        }
+      }
+      .arrow-down {
+        display: flex;
+        margin-left: rem(25);
+        transform: rotate(180deg);
+        fill: $section-news;
+        @media only screen and (max-width: rem(450)) {
+          margin-left: rem(15);
+        }
+      }
+      svg {
+        width: rem(25);
+        height: rem(25);
+        margin: auto;
+      }
+      .color-white {
+        fill: $white-color;
+      }
+    }
+    &-header-click {
+      align-self: flex-end;
+      padding-right: rem(30);
+      @media only screen and (max-width: rem(450)) {
+        padding-right: rem(15);
+      }
+      @media only screen and (max-width: rem(375)) {
+        padding-right: rem(10);
+      }
+    }
+  }
+  .menu-second-multi {
+    width: 100%;
+  }
+  &-content {
+    width: rem(400);
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    background-color: $white-color;
+    margin-top: rem(40);
+    position: absolute;
+    border: rem(1) solid $accent-lightgray;
+    box-shadow: 0 rem(0.5) rem(0.5) $accent-lightgray;
+    z-index: 100;
+    .items-section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: rem(10) rem(15) rem(10) rem(2);
+    }
+    .clear-button {
+      width: 100%;
+      height: rem(60);
+      border: none;
+      color: $white-color;
+      font-size: rem(16);
+      font-weight: 600;
+      letter-spacing: rem(0.2);
+      font-family: "Montserrat";
+      outline: none;
+    }
+  }
+  &-content-second {
+    width: 40.3%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-self: flex-start;
+    background-color: $section-news;
+    border: rem(2) solid $section-news;
+    margin-top: rem(40);
+    @media only screen and (max-width: rem(470)) {
+      width: 41.3%;
+      border: rem(1) solid $section-news;
+    }
+    .items-section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: rem(10) rem(15) rem(10) rem(2);
+    }
+    .clear-button-mobile {
+      display: flex;
+      flex-direction: column;
+      font-family: "Montserrat";
+      font-weight: 100;
+      font-size: rem(16);
+      font-style: italic;
+      color: $white-color;
+      align-self: flex-end;
+      margin-top: rem(10);
+      margin-right: rem(75);
+      outline: none;
+      border: none;
+      &::after {
+        display: block;
+        box-sizing: border-box;
+        content: " ";
+        bottom: rem(10);
+        height: rem(10);
+        border: rem(2) solid;
+        width: 100%;
+        border-color: $white-color;
+        background-color: $white-color;
+        margin-top: rem(16);
+      }
+      @media only screen and (max-width: rem(450)) {
+        margin-right: rem(50);
+      }
+      @media only screen and (max-width: rem(375)) {
+        margin-right: rem(42);
+      }
+    }
+  }
+  &-content-second-multi {
+    width: 100%;
+    border: none;
+  }
+  .menuItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .item-selected-mark {
+      width: rem(8);
+      height: rem(8);
+      margin: rem(5);
+    }
+    .item-content {
+      display: flex;
+      flex-direction: row;
+      text-transform: lowercase;
+      &-name {
+        display: flex;
+        flex-direction: column;
+        color: $accent-lightgray;
+        text-align: end;
+        margin-bottom: rem(4);
+        &::after {
+          display: none;
+          box-sizing: border-box;
+          content: " ";
+          bottom: rem(10);
+          height: rem(2);
+          border: rem(2) solid;
+          border-color: $section-news;
+        }
+        &:hover {
+          margin-bottom: rem(0);
+          &::after {
+            display: block;
+          }
+        }
+      }
+      &-selection {
+        width: rem(18);
+      }
+    }
+  }
+  .menuItem-second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    .item-selected-mark {
+      width: rem(8);
+      height: rem(8);
+      margin: rem(5) rem(40) rem(5) rem(35);
+      @media only screen and (max-width: rem(450)) {
+        margin: rem(5) rem(28) rem(5) rem(24);
+      }
+      @media only screen and (max-width: rem(375)) {
+        margin: rem(5) rem(23) rem(5) rem(18);
+      }
+    }
+    .item-content {
+      display: flex;
+      flex-direction: row;
+      text-transform: lowercase;
+      &-name {
+        display: flex;
+        flex-direction: column;
+        font-family: "Montserrat";
+        font-weight: 100;
+        color: $white-color;
+        text-align: end;
+      }
+      &-space {
+        width: rem(82);
+        @media only screen and (max-width: rem(450)) {
+          width: rem(58);
+        }
+        @media only screen and (max-width: rem(375)) {
+          width: rem(50);
+        }
+      }
+      &-selection {
+        width: rem(18);
+      }
+      .item-selected {
+        color: $white-color;
+        font-weight: 500;
+        letter-spacing: rem(0.3);
+      }
+    }
+  }
+  .half-width-menu {
+    width: 48%;
+  }
+  .sort-menu {
+    width: rem(200);
+  }
+  .filter-menu {
+    @media only screen and (max-width: rem(1200)) {
+      margin-left: rem(-140);
+    }
+  }
+  .one-column {
+    width: 100%;
+  }
+  .two-column {
+    width: 50%;
+    font-size: rem(16);
+  }
+  .color-white {
+    color: $white-color;
+    fill: $white-color;
+  }
+  .back-color-white {
+    background-color: $white-color;
+  }
+  .color-default {
+    color: $section-news;
+    fill: $section-news;
+  }
+  .back-color-default {
+    background-color: $section-news;
+    border-color: $section-news;
+  }
+  .color-news {
+    color: $section-news;
+    fill: $section-news;
+  }
+  .back-color-news {
+    background-color: $section-news;
+    border-color: $section-news;
+  }
+}
+
+@media only screen and (max-width: rem(700)) {
+  .dropdown {
+    width: 48%;
+    margin-left: rem(0);
+    .menu {
+      width: 100%;
+      border: rem(3) solid $section-news;
+      &-header {
+        color: $section-news;
+        &-name {
+          color: $section-news;
+        }
+        svg {
+          fill: $section-news;
+        }
+      }
+    }
+  }
+  .dropdown-multi {
+    width: 86%;
+    position: absolute;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,237 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.section-news-post {
+  margin-top: 0;
+  &-back-button {
+    margin-top: rem(100);
+  }
+  .title-margin-bottom {
+    margin-bottom: rem(90);
+  }
+  .publish-date {
+    margin-left: rem(115);
+    margin-top: rem(-47);
+    color: $accent-lightgray;
+  }
+  svg {
+    width: rem(30);
+    height: rem(30);
+    fill: $section-news;
+    margin: rem(15) rem(15) rem(20) rem(0);
+  }
+  .post-timeStamp {
+    margin-top: rem(13);
+    font-size: rem(14);
+    font-weight: bold;
+    letter-spacing: rem(0.3);
+    text-transform: uppercase;
+  }
+  .post-topics {
+    position: absolute;
+    &-header {
+      font-size: rem(18);
+      font-weight: bold;
+      letter-spacing: rem(0.3);
+      color: $accent-lightgray;
+      margin-top: rem(20);
+      margin-bottom: rem(25);
+    }
+  }
+  .post-topics-horizontal {
+    display: none;
+  }
+  .post-topics-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .arrangement-vertical {
+    flex-direction: column;
+  }
+  .arrangement-horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-body {
+    display: flex;
+    flex-direction: column;
+    &-section {
+      display: flex;
+      flex-direction: column;
+    }
+    &-copy {
+      font-size: rem(18);
+      line-height: rem(34);
+      letter-spacing: rem(0.1);
+      margin-bottom: rem(30);
+      &-line-height {
+        margin-bottom: rem(2);
+      }
+      &-line-break {
+        margin-bottom: rem(40);
+      }
+    }
+    &-quote {
+      font-size: rem(64);
+      letter-spacing: rem(1.5);
+      line-height: rem(65);
+      font-weight: bold;
+    }
+    &-quote-symbol {
+      font-size: rem(64);
+      letter-spacing: rem(1.5);
+      line-height: rem(65);
+      font-weight: bold;
+    }
+    &-quote-person {
+      margin-top: rem(20);
+      margin-bottom: rem(40);
+      &-text {
+        font-size: rem(21.5);
+        letter-spacing: rem(0.3);
+        line-height: rem(36);
+        font-weight: 300;
+      }
+    }
+    &-section-title {
+      margin-top: rem(30);
+      margin-bottom: rem(40);
+      &-text {
+        font-size: rem(37);
+        line-height: rem(37);
+        font-weight: bold;
+      }
+    }
+    &-media {
+      margin-top: rem(60);
+      margin-bottom: rem(30);
+    }
+  }
+  .arrow-left-icon {
+    transform: rotate(90deg);
+  }
+  .social-link-section {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    margin-top: rem(20);
+  }
+  .share-social {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: rem(0.2);
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: rem(10);
+    outline: none;
+    cursor: pointer;
+  }
+  .next-post {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: rem(50);
+
+    font-size: rem(48);
+    font-weight: bold;
+    letter-spacing: rem(-0.5);
+    line-height: rem(49);
+  }
+  .next-post-sep {
+    width: 82%;
+    height: rem(8);
+    margin: rem(100) 9% rem(0) 9%;
+    background-color: $section-news;
+  }
+  .section-post {
+    margin-top: rem(40);
+    .news-header {
+      margin: rem(0) rem(0) rem(25);
+    }
+    .all-news {
+      .masonry {
+        display: -webkit-box; /* Not needed if autoprefixing */
+        display: -ms-flexbox; /* Not needed if autoprefixing */
+        display: flex;
+        margin-left: rem(-28); /* gutter size offset */
+        width: auto;
+      }
+      .masonry-column {
+        padding-left: rem(28);
+        background-clip: padding-box;
+      }
+    }
+  }
+  .color-news {
+    color: $section-news;
+  }
+
+  //Desktop
+  @media only screen and (max-width: rem(1440)) {
+    .post-topics {
+      display: none;
+    }
+    .post-topics-horizontal {
+      display: block;
+      margin-bottom: rem(30);
+    }
+  }
+
+  //tablet & mobile
+  @media only screen and (max-width: rem(864)) {
+    &-back-button {
+      margin-top: rem(0);
+    }
+    .post-body {
+      &-copy {
+        font-size: rem(16);
+        line-height: rem(30);
+        margin-bottom: rem(20);
+      }
+      &-quote {
+        font-size: rem(32);
+        line-height: rem(35);
+      }
+      &-quote-symbol {
+        font-size: rem(35);
+        line-height: rem(0);
+      }
+      &-quote-person {
+        margin-top: rem(15);
+        margin-bottom: rem(20);
+        &-text {
+          font-size: rem(18);
+        }
+      }
+      &-section-title {
+        margin-top: rem(10);
+        margin-bottom: rem(25);
+        &-text {
+          font-size: rem(32);
+          line-height: rem(32);
+          font-weight: bold;
+        }
+      }
+      &-image {
+        margin-top: rem(20);
+        margin-bottom: rem(20);
+      }
+    }
+    .next-post {
+      margin-top: rem(30);
+    }
+    .next-post-sep {
+      margin-top: rem(40);
+    }
+  }
+  @media only screen and (max-width: rem(762)) {
+    .next-post-sep {
+      width: 85%;
+      margin: rem(40) 7.5% rem(0) 7.5%;
+    }
+  }
+}

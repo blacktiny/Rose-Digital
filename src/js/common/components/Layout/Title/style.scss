@@ -1,0 +1,112 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.title {
+  position: relative;
+  margin-bottom: rem(50);
+  text-transform: lowercase;
+  .new-window {
+    display: inline !important;
+    vertical-align: text-top !important;
+  }
+  .color-default {
+    color: $primary-color;
+  }
+  &::after {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    content: " ";
+    bottom: rem(-24);
+    height: rem(2);
+    width: rem(100);
+    border: rem(4) solid;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  &.noHighlight {
+    &::after {
+      display: none;
+    }
+    margin-bottom: rem(0);
+  }
+  &.align-default {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .typography {
+      display: inline-block;
+    }
+  }
+  &.accent-lightgray::after {
+    background-color: $accent-lightgray !important;
+    border-color: $accent-lightgray !important;
+  }
+  &.accent-orange::after {
+    background-color: $accent-orange !important;
+    border-color: $accent-orange !important;
+  }
+  &.accent-green::after {
+    background-color: $accent-green !important;
+    border-color: $accent-green !important;
+  }
+  &.accent-navy::after {
+    background-color: $accent-navy !important;
+    border-color: $accent-navy !important;
+  }
+}
+
+[class*="section-case-studies"] {
+  .title::after {
+    background-color: $section-case-studies;
+    border-color: $section-case-studies;
+  }
+}
+
+.section-news {
+  .title::after {
+    background-color: $section-news;
+    border-color: $section-news;
+    bottom: rem(-24);
+    height: rem(2);
+  }
+}
+
+.section-news-main {
+  .title::after {
+    background-color: $section-news;
+    border-color: $section-news;
+    bottom: rem(-24);
+    height: rem(2);
+  }
+}
+
+.section-news-post {
+  .title::after {
+    background-color: $section-news-post;
+    border-color: $section-news-post;
+  }
+}
+
+.section-what-we-do {
+  .title::after {
+    background-color: $section-what-we-do;
+    border-color: $section-what-we-do;
+  }
+}
+
+.section-about {
+  .title::after {
+    background-color: $section-about;
+    border-color: $section-about;
+  }
+  .footer-top {
+    .title {
+      margin-bottom: rem(60);
+    }
+    .title::after {
+      bottom: rem(-32);
+    }
+  }
+}

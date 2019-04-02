@@ -1,0 +1,36 @@
+@import "~theme/index.scss";
+
+html,
+body {
+  .hero-media {
+    background-size: cover;
+    height: rem(656);
+    max-height: calc(100vh - #{rem(75)});
+    overflow: hidden;
+    video {
+      object-fit: cover;
+    }
+  }
+}
+
+//tablet
+@media only screen and (min-width: rem(768)) and (max-width: rem(1199)) {
+  html,
+  body {
+    .hero-media {
+      height: rem(431);
+      margin-bottom: rem(50);
+    }
+  }
+}
+
+//mobile
+@media only screen and (max-width: rem(767)) {
+  html,
+  body {
+    .hero-media {
+      height: rem(227);
+      margin-bottom: rem(60);
+    }
+  }
+}

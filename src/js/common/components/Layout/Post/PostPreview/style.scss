@@ -1,0 +1,63 @@
+@import "~theme/index.scss";
+
+.starts-half-width-row {
+  padding: rem(0) rem(15) rem(0) rem(0) !important;
+}
+
+.post-preview {
+  margin: rem(0) rem(0) rem(50) rem(0);
+  position: relative;
+  .text-block-post-preview > .typography::after {
+    content: "\61";
+    font-family: "iconFont" !important;
+    color: $section-case-studies;
+    font-size: rem(14);
+    margin-left: rem(14);
+    font-weight: normal !important;
+    -webkit-font-feature-settings: normal !important;
+    font-feature-settings: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    background-color: transparent;
+  }
+  img {
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+  .side-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &.default div div:nth-child(2) {
+    padding-left: rem(0);
+  }
+  .post-preview-title {
+    margin-top: rem(25);
+  }
+  &.full-width-flex {
+    display: inline-flex;
+  }
+}
+
+@media only screen and (min-width: rem(768)) and (max-width: rem(991)) {
+  .starts-half-width-row {
+    padding: rem(0) rem(12.5) rem(0) rem(0) !important;
+  }
+}
+
+@media only screen and (max-width: rem(767)) {
+  .starts-half-width-row {
+    padding: rem(0) !important;
+  }
+  .post-preview {
+    margin: rem(0) rem(0) rem(50) rem(0);
+    &.full-width-flex {
+      display: inline;
+    }
+  }
+}

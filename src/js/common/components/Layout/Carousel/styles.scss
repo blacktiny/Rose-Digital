@@ -1,0 +1,101 @@
+@import "~theme/configs/color";
+@import "~theme/index.scss";
+
+.carousel {
+  position: relative;
+  height: rem(656);
+  .item {
+    .link {
+      width: 100%;
+      overflow: hidden;
+      max-height: calc(100vh - #{rem(75)});
+      height: rem(656);
+      line-height: rem(0);
+      video {
+        object-fit: cover;
+      }
+    }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+    &.active {
+      opacity: 1;
+      display: inline;
+    }
+    transition: all 1s;
+    .client {
+      position: absolute;
+      bottom: rem(55);
+      right: rem(100);
+      height: rem(49);
+      width: rem(671);
+      opacity: 0.5;
+      color: $section-case-studies;
+      font-family: Montserrat;
+      font-size: rem(48);
+      font-weight: bold;
+      letter-spacing: rem(-0.5);
+      line-height: rem(49);
+      text-align: right;
+    }
+    .indicator-wrapper {
+      position: absolute;
+      right: rem(100);
+      bottom: rem(27.5);
+      display: inline-block;
+      flex-direction: row;
+      align-items: center;
+      .indicator {
+        display: inline-block;
+        width: rem(30);
+        height: rem(10);
+        background-color: $section-case-studies;
+        opacity: 0.5;
+        &.active {
+          opacity: 1;
+        }
+        transition: opacity 1s;
+      }
+    }
+  }
+}
+
+//tablet
+@media (max-width: rem(1115)) {
+  .carousel {
+    height: rem(465);
+    .item {
+      .link {
+        height: rem(465);
+      }
+      .client {
+        bottom: rem(78);
+        right: rem(70);
+      }
+      .indicator-wrapper {
+        bottom: rem(50);
+        right: rem(70);
+      }
+    }
+  }
+}
+
+//mobile
+@media (max-width: rem(767)) {
+  .carousel {
+    height: rem(227);
+    .item {
+      .link {
+        height: rem(227);
+      }
+      .client {
+        display: none;
+      }
+      .indicator-wrapper {
+        display: none;
+      }
+    }
+  }
+}

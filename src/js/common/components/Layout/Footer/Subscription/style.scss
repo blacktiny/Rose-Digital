@@ -1,0 +1,101 @@
+@import "~style/configs/color.scss";
+@import "~theme/index.scss";
+
+.subscription {
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .input {
+      font-family: "Montserrat";
+      flex: 1;
+      margin-right: rem(25);
+      color: $section-about;
+      font-size: rem(16);
+      font-weight: bold;
+      letter-spacing: rem(0.12);
+      line-height: rem(28);
+      margin-bottom: rem(9);
+      outline: none;
+      &::placeholder {
+        color: $accent-lightgray;
+      }
+      border: none;
+    }
+    border-bottom: rem(2) solid $accent-lightgray;
+    .submit-button {
+      align-items: middle;
+      position: absolute;
+      right: rem(0);
+      border: none;
+      cursor: pointer;
+      background-color: Transparent;
+      outline: none;
+      .arrow-down {
+        font-size: rem(20);
+        font-weight: bold;
+        margin-bottom: rem(9);
+      }
+    }
+    border-bottom: rem(2) solid $accent-lightgray;
+    .submit-button {
+      padding: rem(0);
+      cursor: pointer;
+      .error & {
+        background-color: $accent-lightgray;
+      }
+      .success & {
+        background-color: $accent-lightgray;
+      }
+    }
+  }
+  .error-message {
+    height: rem(25);
+    color: $error-red;
+    font-family: Montserrat;
+    font-size: rem(11);
+    font-weight: bold;
+    letter-spacing: rem(-0.1);
+    line-height: rem(28);
+    margin-bottom: rem(25);
+  }
+  .success-message {
+    color: $section-what-we-do;
+    font-family: Montserrat;
+    font-size: rem(16);
+    font-weight: bold;
+    letter-spacing: rem(-0.1);
+    line-height: rem(16);
+    position: relative;
+    line-height: rem(32);
+    top: rem(-41);
+    span {
+      font-weight: normal;
+    }
+    @media only screen and (max-width: rem(767)) {
+      top: rem(-90);
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: rem(768)) and (max-width: rem(991)) {
+  .section-footer {
+    .subscription {
+      margin-top: rem(31) !important;
+    }
+  }
+}
+
+@media only screen and (max-width: rem(767)) {
+  .section-footer {
+    .subscription {
+      .input-wrapper {
+        margin-bottom: rem(50);
+      }
+    }
+  }
+}
